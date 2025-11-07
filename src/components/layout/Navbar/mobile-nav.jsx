@@ -6,30 +6,58 @@ import {
   faFacebookF,
   faYoutube,
   faTwitter,
-  faTiktok,
   faThreads,
-  faBluesky,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const SOCIAL_LINKS = [
-  { icon: faInstagram, href: "#", label: "Instagram", color: "hover:text-pink-500" },
-  { icon: faFacebookF, href: "#", label: "Facebook", color: "hover:text-blue-600" },
-  { icon: faTiktok, href: "#", label: "TikTok", color: "hover:text-black" },
-  { icon: faYoutube, href: "#", label: "YouTube", color: "hover:text-red-600" },
-  { icon: faTwitter, href: "#", label: "Twitter", color: "hover:text-blue-400" },
-  { icon: faThreads, href: "#", label: "Threads", color: "hover:text-gray-600" },
-  { icon: faBluesky, href: "#", label: "Bluesky", color: "hover:text-blue-400" },
-  { icon: faEnvelope, href: "#", label: "Email", color: "hover:text-yellow-600" },
+  {
+    icon: faInstagram,
+    href: "https://www.instagram.com/mr.chevrolet_46?igsh=MWl6Z2h2N3d2bGlnZA%3D%3D&utm_source=qr ",
+    label: "Instagram",
+    color: "hover:text-pink-500",
+  },
+  {
+    icon: faFacebookF,
+    href: "https://www.facebook.com/",
+    label: "Facebook",
+    color: "hover:text-blue-600",
+  },
+
+  {
+    icon: faYoutube,
+    href: "https://www.youtube.com/",
+    label: "YouTube",
+    color: "hover:text-red-600",
+  },
+  {
+    icon: faTwitter,
+    href: "https://x.com/",
+    label: "Twitter",
+    color: "hover:text-blue-400",
+  },
+  {
+    icon: faThreads,
+    href: "https://www.threads.com/",
+    label: "Threads",
+    color: "hover:text-gray-600",
+  },
+
+  {
+    icon: faEnvelope,
+    href: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+    label: "Email",
+    color: "hover:text-yellow-600",
+  },
 ];
 
 const MENU_ITEMS = [
-  { label: "MUSIC", href: "#music" },
-  { label: "NEWS", href: "#news" },
-  { label: "BIOGRAPHY", href: "#biography" },
-  { label: "VIDEOS", href: "#videos" },
-  { label: "EQUIPMENT", href: "#equipment" },
-  { label: "STORE", href: "#store" },
+  { label: "New Arrivals", href: "/new" },
+  { label: "Hot Sales", href: "/sale" },
+  { label: "Big Discount", href: "/trends" },
+  { label: "Festival Collection", href: "#videos" },
+  { label: "Sets", href: "#equipment" },
+  { label: "Accessories", href: "#store" },
 ];
 
 export default function MobileMenu({ onClose }) {
@@ -60,7 +88,8 @@ export default function MobileMenu({ onClose }) {
   return (
     <div
       ref={containerRef}
-      className="md:hidden bg-white momo dark:bg-black border-t border-gray-300 dark:border-gray-700 w-full"
+      className="md:hidden z-50 tracking-widest bg-white momo dark:bg-black/40 border-t
+       border-gray-300 dark:border-gray-700 rounded-2xl shadow-lg/30 w-full"
     >
       {/* Menu Items */}
       <div className="px-4 py-6 space-y-4">
@@ -80,16 +109,20 @@ export default function MobileMenu({ onClose }) {
       <div className="h-px bg-gray-300 dark:bg-gray-700" />
 
       {/* Social Links */}
-      <div className="px-4 py-6 flex flex-wrap gap-4">
+      <div className="px-4 py-6  flex flex-wrap gap-4">
         {SOCIAL_LINKS.map((social, index) => (
           <a
             key={social.label}
             ref={(el) => (socialRefs.current[index] = el)}
             href={social.href}
             aria-label={social.label}
-            className={`text-black dark:text-white transition-colors ${social.color}`}
+            className={`text-black   dark:text-white transition-colors ${social.color}`}
           >
-            <FontAwesomeIcon icon={social.icon} size="lg" />
+            <FontAwesomeIcon
+              className="shadow-2xl shadow-amber-50 "
+              icon={social.icon}
+              size="xl"
+            />
           </a>
         ))}
       </div>

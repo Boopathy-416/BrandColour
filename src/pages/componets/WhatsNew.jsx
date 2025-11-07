@@ -58,6 +58,7 @@ export default function WhatsNew() {
   return (
     <section className="py-16 bg-[#fffff]">
       {/* Title */}
+      
       <h2
         className="text-3xl momo text-center mb-10"
         style={{ color: "#212121" }}
@@ -65,8 +66,8 @@ export default function WhatsNew() {
         <span className="relative">
           What's{" "}
           <span
-            className="font-bold text-yellow-500"
-            style={{ borderBottom: "6px solid #ffcc00" }}
+            className=" bebas tracking-widest text-yellow-500"
+            style={{ borderBottom: "2px double #553510" }}
           >
             New
           </span>
@@ -74,17 +75,17 @@ export default function WhatsNew() {
       </h2>
 
       {/* Product Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
+      <div className="max-w-6xl momo mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
         {products.map((item) => (
           <div
             key={item.id}
-            className="bg-transparent  rounded-lg overflow-hidden  transition-all duration-300"
+            className="bg-transparent rounded-lg overflow-hidden  transition-all duration-300"
           >
             <div className="overflow-hidden">
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-[220px] object-cover   transform hover:scale-105 transition-transform duration-800"
+                className="w-full h-[220px] object-cover bebas  transform hover:scale-105 transition-transform duration-800"
               />
             </div>
 

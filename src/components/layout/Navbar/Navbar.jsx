@@ -145,7 +145,7 @@ export default function Navbar() {
                 <NavMenu />
                 <div className="flex items-center gap-4">
 
-                  {/* 🌐 Language */}
+               
                   <LanguageSwitcher
                     isOpen={isLanguageOpen}
                     onToggle={() => setIsLanguageOpen(!isLanguageOpen)}
@@ -189,13 +189,13 @@ export default function Navbar() {
 
                 {/* 👤 & 🛒 */}
                 <FontAwesomeIcon
-                  className="text-lg"
+                  size={24}
                   icon={faUser}
                   onClick={() => setShowLoginModal(true)}
                 />
 
                 <div className="relative" onClick={() => setShowCartModal(true)}>
-                  <FontAwesomeIcon className="text-lg" icon={faCartShopping} />
+                  <FontAwesomeIcon size={24} icon={faCartShopping} />
                   {cartCount > 0 && (
                     <span className="absolute -top-1 -right-2 bg-red-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                       {cartCount}
@@ -205,7 +205,7 @@ export default function Navbar() {
 
                 <button
                   onClick={toggleMenu}
-                  className="text-black hover:text-gray-500 transition p-2"
+                  className="text-white/70 ring-2 ring-black/60 rounded-full hover:text-gray-500 transition p-1 bg-black/50 "
                 >
                   {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -217,6 +217,7 @@ export default function Navbar() {
             <MobileMenu onClose={() => setIsOpen(false)} />
           )}
         </div>
+        
       </nav>
 
       {/* ✅ Modals */}

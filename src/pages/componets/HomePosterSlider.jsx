@@ -86,10 +86,10 @@ export default function PosterSlider() {
         {images.map((_, i) => (
           <div
             key={i}
-            className={`w-4 h-0.5 rounded-full transition-all opacity-70 duration-500 ${
+            className={`w-2 h-2 rounded-full transition-all opacity-70 duration-500 ${
               i === current
-                ? "ring-white ring-1 scale-110"
-                : "bg-amber-800 ring-1"
+                ? "ring-white bg-black ring-1 scale-110"
+                : "bg-amber-800 ring-2"
             }`}
           />
         ))}

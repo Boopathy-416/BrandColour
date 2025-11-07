@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LANGUAGES = [
   { code: "en", name: "English" },
@@ -37,15 +38,15 @@ export default function LanguageSwitcher() {
       {/* 🌐 Language Button */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="inline-flex items-center justify-center w-10 h-10 rounded-full  hover:bg-gray-100 transition-all duration-200"
+        className="inline-flex items-center justify-center p-2 rounded-full  hover:bg-gray-100 transition-all duration-200"
         style={{ cursor: "pointer" }}
       >
-        <Globe className="w-5 h-5 text-gray-700" />
+         <FontAwesomeIcon size="24" icon={faLanguage} />
       </button>
 
       {isOpen && (
         <div
-          className="absolute right-0 mt-6 w-40 p-2 momo bg-transparent ring-1 rounded-sm  shadow-sm 
+          className="absolute right-0 mt-6 w-40 py-3 px-2 momo  bg-transparent ring-1 rounded-xl  shadow-lg/30 
            ring-black/5 ring-opacity-50  z-50"
         style={{
           fontWeight:"700",
@@ -55,10 +56,10 @@ export default function LanguageSwitcher() {
             <button
               key={lang.code}
               onClick={() => handleChangeLanguage(lang.code)}
-              className={`block w-full  text-left px-4 py-2 text-sm   transition-all duration-200 ease-in hover:bg-gray-300 hover:scale-100  ${
+              className={`block w-full  text-left px-3   py-2 text-sm   transition-all duration-200 ease-in hover:bg-gray-300 hover:scale-100  ${
                 i18n.language === lang.code
-                  ? "rounded-sm bg-blue-50 "
-                  :"text-foreground hover:bg-green-200 hover:text-secondary-foreground"
+                  ? "rounded-md border-l-4 border-t-3 backdrop-blur-4xl  border-1"
+                  :" rounded-md hover:bg-black/50  hover:border-2  hover:tracking-wider "
               }`}
             >
               {lang.name}

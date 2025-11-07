@@ -1,8 +1,10 @@
+import SearchBar from "./SearchBar";
+
 export default function FilterBar({ filters, setFilters }) {
   return (
-    <div className="flex flex-wrap gap-4 items-center justify-between mb-6 bg-gray-50 p-4 rounded-xl shadow-sm">
+    <div className="flex flex-wrap gap-4 border-y-4  bebas tracking-wide items-center md:justify-start mb-6 justify-center bg-gray-50 p-4 rounded-xl shadow-sm">
       <select
-        className="border p-2 rounded-md"
+        className="border p-2 rounded-md border-y-2 "
         onChange={(e) => setFilters({ ...filters, category: e.target.value })}
       >
         <option value="">All Categories</option>
@@ -11,7 +13,7 @@ export default function FilterBar({ filters, setFilters }) {
       </select>
 
       <select
-        className="border p-2 rounded-md"
+        className="border p-2 rounded-md border-y-2 "
         onChange={(e) => setFilters({ ...filters, color: e.target.value })}
       >
         <option value="">All Colors</option>
@@ -22,7 +24,7 @@ export default function FilterBar({ filters, setFilters }) {
       </select>
 
       <select
-        className="border p-2 rounded-md"
+        className="border p-2 rounded-md border-y-2 "
         onChange={(e) => setFilters({ ...filters, size: e.target.value })}
       >
         <option value="">All Sizes</option>
@@ -33,7 +35,7 @@ export default function FilterBar({ filters, setFilters }) {
       </select>
 
       <select
-        className="border p-2 rounded-md"
+        className="border p-2 rounded-md border-y-2 "
         onChange={(e) => setFilters({ ...filters, sort: e.target.value })}
       >
         <option value="featured">Featured</option>
@@ -41,6 +43,8 @@ export default function FilterBar({ filters, setFilters }) {
         <option value="high">Price: High to Low</option>
         <option value="new">Newest Arrivals</option>
       </select>
+
+      <SearchBar />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function NavMenu() {
           className="text-sm  text-gray-800 hover:text-gray-800 transition-colors relative group"
         >
           {item.label}
-          <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gray-800 group-hover:w-full transition-all duration-300"></span>
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
         </a>
       ))}
     </div>

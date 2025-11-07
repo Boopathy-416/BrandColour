@@ -37,12 +37,7 @@ const SOCIAL_LINKS = [
     label: "Threads",
     color: "hover:text-gray-600",
   },
-  // {
-  //   icon: faBluesky,
-  //   href: "#",
-  //   label: "Bluesky",
-  //   color: "hover:text-blue-400",
-  // },
+
   {
     icon: faEnvelope,
     href: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
