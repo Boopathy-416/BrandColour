@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const images = [
-  "src/assets/images/poster.png",
-  "src/assets/images/l1.png",
-  "src/assets/images/bag.png",
-  "src/assets/images/t3.png",
-  "src/assets/images/cf.png",
-  "src/assets/images/tw.png",
-  "src/assets/images/k.png",
-];
+// ✅ Import images instead of string paths
+import poster from "../../assets/images/poster.png";
+import l1 from "../../assets/images/l1.png";
+import bag from "../../assets/images/bag.png";
+import t3 from "../../assets/images/t3.png";
+import cf from "../../assets/images/cf.png";
+import tw from "../../assets/images/tw.png";
+import k from "../../assets/images/k.png";
+
+const images = [poster, l1, bag, t3, cf, tw, k];
 
 export default function PosterSlider() {
   const [current, setCurrent] = useState(0);

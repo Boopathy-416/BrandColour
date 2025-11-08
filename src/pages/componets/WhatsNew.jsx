@@ -3,54 +3,64 @@ import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
+// ✅ Import images from assets
+import bag from "../../assets/images/bag.png";
+import k from "../../assets/images/k.png";
+import child from "../../assets/images/child.png";
+import l1 from "../../assets/images/l1.png";
+import cf from "../../assets/images/cf.png";
+import look from "../../assets/images/look.png";
+import t3 from "../../assets/images/t3.png";
+import tw from "../../assets/images/tw.png";
+
 const products = [
   {
     id: 1,
     name: "Purple Floral Blouse",
     price: "USD $29.90",
-    image: "src/assets/images/bag.png",
+    image: bag,
   },
   {
     id: 2,
     name: "Taupe Mixed Print Long-Sleeve Shirt",
     price: "USD $29.40",
-    image: "src/assets/images/k.png",
+    image: k,
   },
   {
     id: 3,
     name: "White Floral Blouse",
     price: "USD $28.90",
-    image: "src/assets/images/child.png",
+    image: child,
   },
   {
     id: 4,
     name: "Emerald Green Textured Shirt",
     price: "USD $30.09",
-    image: "src/assets/images/l1.png",
+    image: l1,
   },
   {
     id: 5,
     name: "Purple Floral Blouse",
     price: "USD $29.90",
-    image: "src/assets/images/cf.png",
+    image: cf,
   },
   {
     id: 6,
     name: "Taupe Mixed Print Long-Sleeve Shirt",
     price: "USD $29.40",
-    image: "src/assets/images/look.png",
+    image: look,
   },
   {
     id: 7,
     name: "White Floral Blouse",
     price: "USD $28.90",
-    image: "src/assets/images/t3.png",
+    image: t3,
   },
   {
     id: 8,
     name: "Emerald Green Textured Shirt",
     price: "USD $30.09",
-    image: "src/assets/images/tw.png",
+    image: tw,
   },
 ];
 
