@@ -98,3 +98,7 @@ export default function PosterSlider() {
     </div>
   );
 }
+
+
+
+
