@@ -1,6 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
+// ✅ Import payment icons
+import visa from "../../../../public/visa.svg";
+import applelogo from "../../../../public/applelogo.svg";
+import gp from "../../../../public/gp.svg";
+import mastercard from "../../../../public/master card.svg"; // rename file if space exists
+import paypal from "../../../../public/paypal.svg";
 
 export default function Footer() {
   const footerRef = useRef(null);
@@ -98,14 +104,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Payment Icons */}
-      <div className="flex flex-wrap justify-center items-center  gap-4 mt-6 mb-4">
-        <img src="public/visa.svg" className=" h-6 p-1" alt="visa" />
-
-        <img src="public/applelogo.svg" className="h-7.5 p-1" alt="visa" />
-        <img src="public/gp.svg" className="h-8 p-1" alt="visa" />
-        <img src="public/master card.svg" className="h-8 p-1" alt="visa" />
-        <img src="public/paypal.svg" className="h-9 p-1" alt="visa" />
+      {/* ✅ Payment Icons */}
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-4 footer-icons">
+        <img src={visa} alt="Visa" className="h-6 p-1" />
+        <img src={applelogo} alt="Apple Pay" className="h-7.5 p-1" />
+        <img src={gp} alt="Google Pay" className="h-8 p-1" />
+        <img src={mastercard} alt="MasterCard" className="h-8 p-1" />
+        <img src={paypal} alt="PayPal" className="h-9 p-1" />
       </div>
 
       {/* Bottom Line */}
