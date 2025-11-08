@@ -1,15 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCcVisa,
-  faCcMastercard,
-  faCcAmex,
-  faCcDiscover,
-  faCcPaypal,
-  faCcJcb,
-  faCcDinersClub,
-} from "@fortawesome/free-brands-svg-icons";
+
 
 export default function Footer() {
   const footerRef = useRef(null);
